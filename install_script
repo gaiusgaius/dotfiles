@@ -1,5 +1,4 @@
 #!/bin/bash
-set -x
 
 # install_script: automatically symlinks all the dotfiles installed from git. Also backs up old dotfiles in ~/old_dotfiles
 
