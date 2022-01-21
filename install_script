@@ -12,7 +12,6 @@ mkdir -p ${old_dotfiles}
 
 for filename in ${destinations[@]}; do
   if [[ -f "$filename" ]]; then
-    echo "$filename"
     mv "$filename" $old_dotfiles
   fi
 done
