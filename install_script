@@ -7,7 +7,7 @@ dotfiles=~/dotfiles
 old_dotfiles=~/old_dotfiles
 
 files=(bashrc vimrc sh.vim tex.vim py.vim text.vim preamble.tex code.tex pgfplotsitablecsv.tex)
-destinations=( ~/.bashrc ~/.vimrc ~/.vim/ftplugin/sh.vim ~/.vim/ftplugin/tex.vim ~/.vim/ftplugin/py.vim ~/.vim/ftplugin/text.vim ~/.vim/snippets/preamble.tex ~/.vim/snippets/code.tex ~/.vim/snippets/pgfplotstablecsv.tex)
+destinations=(~/.bashrc ~/.vimrc ~/.vim/ftplugin/sh.vim ~/.vim/ftplugin/tex.vim ~/.vim/ftplugin/py.vim ~/.vim/ftplugin/text.vim ~/.vim/snippets/preamble.tex ~/.vim/snippets/code.tex ~/.vim/snippets/pgfplotstablecsv.tex)
 
 mkdir -p ${old_dotfiles}
 
