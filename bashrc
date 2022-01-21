@@ -123,16 +123,7 @@ set -o vi
 alias c='clear'
 alias rm='rm -iv'
 
-export PATH=${PATH}:/home/julius/bin
+export PATH=${PATH}:~/bin
 export EDITOR=vim
 
-alias firstlogin='eval $(ssh-agent); ssh-add ~/.ssh/id_rsa; ssh gaius@surlui.xyz'
-alias server='ssh gaius@surlui.xyz'
 
-[ -n "$XTERM_VERSION"  ] && transset --id "$WINDOWID" 0.7 >/dev/null
-
-# export HISTSIZE="INFINITE"
-
-# To only have to input the passphrase once
-alias firstlog='eval $(ssh-agent); ssh-add /home/julius/.ssh/id_rsa; ssh gaius@surlui.xyz'
-alias server='ssh gaius@surlui.xyz'
