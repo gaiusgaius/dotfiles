@@ -26,10 +26,10 @@ filetype plugin on
   "set termguicolors
 "endif
 "colorscheme solarized
-"set t_Co=256
-"colorscheme gruvbox
-"set background=dark
-colorscheme default
+set t_Co=256
+colorscheme gruvbox
+set background=dark
+"colorscheme default
 
 " Allow recursive search for file in directorys
 set path+=**
