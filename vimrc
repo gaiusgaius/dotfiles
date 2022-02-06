@@ -15,6 +15,10 @@ Plugin 'morhetz/gruvbox'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-latex/vim-latex'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()
 
