@@ -1,4 +1,4 @@
-colorscheme desert
+" colorscheme desert
 setlocal textwidth=75
 setlocal tabstop=4
 setlocal shiftwidth=4

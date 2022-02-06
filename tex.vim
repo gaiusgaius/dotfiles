@@ -1,5 +1,5 @@
 setlocal number
-colorscheme default
+" colorscheme default
 syntax on
 setlocal tabstop=2
 setlocal shiftwidth=2

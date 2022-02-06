@@ -1,5 +1,5 @@
 setlocal number
-colorscheme desert
+" colorscheme desert
 syntax on
 setlocal tabstop=4
 setlocal shiftwidth=4
