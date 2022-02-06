@@ -2,30 +2,37 @@
 
 # install_script: automatically symlinks all the dotfiles installed from git. Also backs up old dotfiles in ~/old_dotfiles
 
+read -p "For all config files to work, you have to have 
+  oh-my-zsh installed" answer
+
 dotfiles=~/dotfiles
 old_dotfiles=~/old_dotfiles
 
-files=(bashrc vimrc sh.vim tex.vim py.vim text.vim preamble.tex code.tex pgfplotstablecsv.tex)
-destinations=(~/.bashrc ~/.vimrc ~/.vim/ftplugin/sh.vim ~/.vim/ftplugin/tex.vim ~/.vim/ftplugin/py.vim ~/.vim/ftplugin/text.vim ~/.vim/snippets/preamble.tex ~/.vim/snippets/code.tex ~/.vim/snippets/pgfplotstablecsv.tex)
+files=(bashrc vimrc sh.vim tex.vim py.vim text.vim preamble.tex code.tex pgfplotstablecsv.tex zshrc)
+destinations=(~/.bashrc ~/.vimrc ~/.vim/ftplugin/sh.vim ~/.vim/ftplugin/tex.vim ~/.vim/ftplugin/py.vim ~/.vim/ftplugin/text.vim ~/.vim/snippets/preamble.tex ~/.vim/snippets/code.tex ~/.vim/snippets/pgfplotstablecsv.tex ~/.zshrc)
 
-mkdir -p ${old_dotfiles}
+if [[ "$answer" =~  [Y.*|y.*] ]]; then
+  mkdir -p ${old_dotfiles}
 
-for filename in ${destinations[@]}; do
-  if [[ -f "$filename" ]]; then
-    mv "$filename" $old_dotfiles
-  fi
-done
+  for filename in ${destinations[@]}; do
+    if [[ -f "$filename" ]]; then
+      mv "$filename" $old_dotfiles
+    fi
+  done
 
-mkdir -p ~/.vim/ftplugin ~/.vim/snippets ~/.vim/bundle
+  mkdir -p ~/.vim/ftplugin ~/.vim/snippets ~/.vim/bundle
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-i=0
-for destination in ${destinations[@]}; do
-  echo ${dotfiles}/${files[$i]} "$destination"
-  ln -s ${dotfiles}/${files[$i]} "$destination"
-  i=$((i+1))
-done
+  i=0
+  for destination in ${destinations[@]}; do
+    echo ${dotfiles}/${files[$i]} "$destination"
+    ln -s ${dotfiles}/${files[$i]} "$destination"
+    i=$((i+1))
+  done
+else 
+  exit 1
+fi
 
 
 
