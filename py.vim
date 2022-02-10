@@ -8,5 +8,5 @@ setlocal softtabstop=4
 setlocal autoindent
 setlocal smartindent
 
-nnoremap <F2> :w<Return>:!clear; python %<Return>
+nnoremap <F2> :w<Return>:!clear; python3 %<Return>
 

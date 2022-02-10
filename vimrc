@@ -35,6 +35,11 @@ colorscheme gruvbox
 set background=dark
 "colorscheme default
 
+" Setting the lightline colorscheme to gruvbox
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
+
 " Allow recursive search for file in directorys
 set path+=**
 " Enable a menu for completion when pressing tab 
@@ -63,4 +68,5 @@ filetype indent on
 " and open vim
 let g:tex_flavor='latex'
 
+nnoremap <F2> :w<Return>:!clear; python3 %<Return>
 
