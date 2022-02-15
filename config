@@ -219,6 +219,7 @@ default_floating_border pixel 3 px
 # Loading random Wallpaper
 exec_always feh --randomize --bg-fill ~/Pictures/Wallpapers/gruvbox-wallpapers/*   
 
+# Must install "light" package before
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 
