@@ -70,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize zsh-syntax-highlighting zsh-autosuggestions copybuffer copyfile web-search)
+plugins=(git colored-man-pages colorize zsh-syntax-highlighting zsh-autosuggestions copybuffer copyfile web-search zsh-vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,11 +82,11 @@ export MANPATH="/usr/local/man:$MANPATH"
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+#if [[ -n $SSH_CONNECTION ]]; then
+#  export EDITOR='vim'
+#else
+#  export EDITOR='mvim'
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -103,13 +103,21 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias c='clear'
 alias rm='rm -iv'
 alias wlan='nmtui'
+alias vimrc='vim ~/.vimrc'
+alias prog='read tmptmp; echo $tmptmp >> ~/Documents/linux/coolprograms'
+alias showprog='less ~/Documents/linux/coolprograms'
+alias colorscheme='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 
 # To only have to input the passphrase once
 alias firstlog='eval $(ssh-agent); ssh-add ~/.ssh/id_rsa; ssh gaius@surlui.xyz'
 alias server='ssh gaius@surlui.xyz'
+
+export EDITOR=vim
 
 # Enable vim keybindings
 bindkey -v
 
 setopt sharehistory
 setopt histignoredups
+
+source ~/bin/jump.sh
