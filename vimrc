@@ -19,6 +19,9 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -30,14 +33,15 @@ filetype plugin on
   "set termguicolors
 "endif
 "colorscheme solarized
-set t_Co=256
-colorscheme gruvbox
-set background=dark
+"set t_Co=256
+"colorscheme gruvbox
+"set background=dark
 "colorscheme default
+colorscheme molokai_dark
 
 " Setting the lightline colorscheme to gruvbox
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'molokai',
       \ }
 
 " Allow recursive search for file in directorys

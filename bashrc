@@ -122,8 +122,11 @@ set -o vi
 # Useful aliases
 alias c='clear'
 alias rm='rm -iv'
+alias colorscheme='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 
 export PATH=${PATH}:~/bin
 export EDITOR=vim
+
+source ~/bin/jump1.sh
 
 
