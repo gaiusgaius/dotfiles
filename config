@@ -232,4 +232,8 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
 
 # Transparency in terminal
-exec xcompmgr -c -f -n 
+# exec xcompmgr -c -f -n 
+
+# Always make firefox open in Workspace 9
+assign [class="firefox"] 9
+
