@@ -235,5 +235,5 @@ client.background       #ffffff
 # exec xcompmgr -c -f -n 
 
 # Always make firefox open in Workspace 9
-assign [class="firefox"] 9
+assign [class="Firefox"] 9
 
