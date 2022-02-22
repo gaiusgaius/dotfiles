@@ -37,7 +37,7 @@ filetype plugin on
 "colorscheme gruvbox
 "set background=dark
 "colorscheme default
-colorscheme molokai_dark
+colorscheme molokai
 
 " Setting the lightline colorscheme to gruvbox
 let g:lightline = {
@@ -72,5 +72,5 @@ filetype indent on
 " and open vim
 let g:tex_flavor='latex'
 
-nnoremap <F2> :w<Return>:!clear; python3 %<Return>
+" nnoremap <F2> :w<Return>:!clear; python3 %<Return>
 
