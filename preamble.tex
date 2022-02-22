@@ -1,7 +1,7 @@
 \documentclass{article}
 
 % Math
-\usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latextut/step3.tex]
+\usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latextut/step3.tex]. 
 \usepackage{amsthm} % Enables the \theoremstyle{} command and the proof environment
 % Pictures
 \usepackage{graphicx} % Enables the \includegraphics[]{} option [~/Documents/latextut/step5.tex]
@@ -40,6 +40,21 @@
   round-mode        = places, % Rounds numbers
   round-precision   = 2, % to 2 places  
 }
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{plain}
+\newtheorem{corollary}{Corollary}[theorem]
+
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 
 \title{<++>}
 \date{<++>}
