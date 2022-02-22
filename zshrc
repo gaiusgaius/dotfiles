@@ -121,3 +121,5 @@ setopt sharehistory
 setopt histignoredups
 
 source ~/bin/jump.sh
+
+setxkbmap -option caps:swapescape
