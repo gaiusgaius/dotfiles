@@ -72,5 +72,8 @@ filetype indent on
 " and open vim
 let g:tex_flavor='latex'
 
-" nnoremap <F2> :w<Return>:!clear; python3 %<Return>
-
+" Indents word-wrapped lines as much as the 'parent' line
+set breakindent
+" Ensures word-wrap does not split words
+set formatoptions=l
+set lbr

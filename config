@@ -49,7 +49,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -210,11 +210,11 @@ bar {
 
 # Gaps
 gaps inner 4
-gaps outer 4
+gaps outer 0
 
 # Setting the border of the windows
-default_border pixel 3 px
-default_floating_border pixel 3 px
+default_border pixel 1 px
+default_floating_border pixel 1 px
 
 # Loading random Wallpaper
 exec_always feh --randomize --bg-fill ~/Pictures/Wallpapers/gruvbox-wallpapers/*   
@@ -238,3 +238,18 @@ client.background       #ffffff
 # Always make firefox open in Workspace 9
 assign [class="Firefox"] 9
 
+bindsym $mod+y exec ~/bin/dmenyt
+
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
+# Show the sup-mail scratchpad window, if any.
+#bindsym mod4+s [title="^Sup ::"] scratchpad show
+
+exec gnome-terminal
+for_window [class="^Gnome-terminal$"] move scratchpad
+
+exec ~/bin/low_battery.sh

@@ -6,3 +6,5 @@ setlocal expandtab
 
 setlocal dictionary=/usr/share/dict/words
 setlocal spell
+
+
