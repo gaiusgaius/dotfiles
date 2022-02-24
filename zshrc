@@ -108,10 +108,6 @@ alias prog='read tmptmp; echo $tmptmp >> ~/Documents/linux/coolprograms'
 alias showprog='less ~/Documents/linux/coolprograms'
 alias colorscheme='bash -c "$(wget -qO- https://git.io/vQgMr)"'
 
-# To only have to input the passphrase once
-alias firstlog='eval $(ssh-agent); ssh-add ~/.ssh/id_rsa; ssh gaius@surlui.xyz'
-alias server='ssh gaius@surlui.xyz'
-
 export EDITOR=vim
 
 # Enable vim keybindings
@@ -121,5 +117,6 @@ setopt sharehistory
 setopt histignoredups
 
 source ~/bin/jump.sh
+source ~/bin/secret_aliases.sh
 
 setxkbmap -option caps:swapescape
