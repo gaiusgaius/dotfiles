@@ -22,6 +22,9 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-surround'
+Plugin 'PietroPate/vim-tex-conceal'
+Plugin 'sirver/ultisnips'
 
 call vundle#end()
 
@@ -77,3 +80,8 @@ set breakindent
 " Ensures word-wrap does not split words
 set formatoptions=l
 set lbr
+
+set conceallevel=2
+let g:tex_conceal="abdgms"
+
+let g:Tex_AdvancedMath=1
