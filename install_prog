@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Installing all packages which are in the Ubuntu-Repo
+sudo apt-get -y install mpv\
+  sxiv\
+  feh\
+  cmus\
+  ffmpeg\
+  youtube-dl\
+  vim\
+  python3\
+  zsh\
+  texlive-full\
+  rofi\
+  dmenu\
+  xfce4-terminal\
+  gnome-terminal\
+  imagemagick\
+  scrot\
+  gimp\
+  firefox\
+  libreoffice\
+  curl\
+  wget\
+  git
+
+# i3-swallow
+if [[ ! -d ~/i3-swallow ]]; then
+  git clone https://github.com/jamesofarrell/i3-swallow.git ~/i3-swallow
+  pip install --user ~/i3-swallow
+fi
+
+# spotify_dl
+pip3 install spotify_dl
+
+# ohmyzsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Signal
+# 1. Install our official public software signing key
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+
+# 2. Add our repository to your list of repositories
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+
+# 3. Update your package database and install signal
+sudo apt update && sudo apt install signal-desktop
