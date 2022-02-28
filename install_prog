@@ -22,7 +22,9 @@ sudo apt-get -y install mpv\
   libreoffice\
   curl\
   wget\
-  git
+  git\
+  tldr\
+  python3-pip
 
 # i3-swallow
 if [[ ! -d ~/i3-swallow ]]; then
