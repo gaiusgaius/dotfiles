@@ -212,12 +212,18 @@ bar {
 gaps inner 4
 gaps outer 0
 
+bindsym $mod+g gaps inner current plus 5
+bindsym $mod+Shift+g gaps inner current minus 5
+
 # Setting the border of the windows
 default_border pixel 1 px
 default_floating_border pixel 1 px
 
 # Loading random Wallpaper
-exec_always feh --randomize --bg-fill ~/Pictures/Wallpapers/gruvbox-wallpapers/*   
+# exec_always feh --randomize --bg-fill ~/Pictures/Wallpapers/gruvbox-wallpapers/*   
+
+# Loading specific Wallpaper
+exec_always feh --bg-fill ~/Pictures/Wallpapers/gruvbox-wallpapers/forest2.jpg
 
 # Must install "light" package before
 bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
@@ -238,8 +244,6 @@ client.background       #ffffff
 # Always make firefox open in Workspace 9
 assign [class="Firefox"] 9
 
-bindsym $mod+y exec ~/bin/dmenyt
-
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
@@ -249,7 +253,8 @@ bindsym $mod+minus scratchpad show
 # Show the sup-mail scratchpad window, if any.
 #bindsym mod4+s [title="^Sup ::"] scratchpad show
 
-exec gnome-terminal
+exec gnome-terminal -e cmus
 for_window [class="^Gnome-terminal$"] move scratchpad
 
+bindsym $mod+y exec ~/bin/dmenyt
 exec ~/bin/low_battery.sh
