@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Script to ease the use of Vim, Zathura and vim-latexsuite.
+
+if [[ -n "$1" ]]; then 
+  if [[ -f "$1".tex ]]; then 
+    pdflatex "$1".tex > /dev/null && zathura "$1".pdf &
+    vim "$1".tex
+  else
+    cat /home/julius/.vim/snippets/preamble.tex > "$1".tex
+    pdflatex "$1".tex > /dev/null && zathura "$1".pdf &
+    vim "$1".tex
+  fi
+else
+  read -p "Enter filename --> " filename
+  if [[ -f "$filename".tex ]]; then
+    pdflatex "$filename".tex > /dev/null && zathura "$filename".pdf &
+    vim "$filename".tex
+  else
+    cat /home/julius/.vim/snippets/preamble.tex > "$filename".tex
+    pdflatex "$filename".tex > /dev/null && zathura "$filename".pdf &
+    vim "$filename".tex
+  fi
+fi
+
+
+
+
