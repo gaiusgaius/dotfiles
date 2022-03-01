@@ -33,5 +33,8 @@ else
   exit 1
 fi
 
+if [[ -d ~/.oh-my-zsh/themes ]]; then
+  cp "$dotfiles/own.zsh-theme" ~/.oh-my-zsh/themes
+fi
 
 
