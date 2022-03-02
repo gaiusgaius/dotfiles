@@ -25,6 +25,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-surround'
 Plugin 'PietroPate/vim-tex-conceal'
 Plugin 'sirver/ultisnips'
+Plugin 'honza/vim-snippets'
 
 call vundle#end()
 
@@ -84,4 +85,8 @@ set lbr
 set conceallevel=2
 let g:tex_conceal="abdgms"
 
-let g:Tex_AdvancedMath=1
+let g:Tex_AdvancedMath=2
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
