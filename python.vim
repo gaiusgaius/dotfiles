@@ -10,5 +10,12 @@ setlocal smartindent
 set number
 set relativenumber
 
+colorscheme molokai
+
+" Setting the lightline colorscheme to gruvbox
+let g:lightline = {
+      \ 'colorscheme': 'molokai',
+      \ }
+
 nnoremap <F2> :w<Return>:!clear; python3 %<Return>
 

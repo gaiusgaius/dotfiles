@@ -7,3 +7,10 @@ setlocal expandtab
 setlocal softtabstop=2
 setlocal autoindent
 setlocal smartindent
+
+colorscheme molokai
+
+" Setting the lightline colorscheme to gruvbox
+let g:lightline = {
+      \ 'colorscheme': 'molokai',
+      \ }
