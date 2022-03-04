@@ -258,3 +258,6 @@ for_window [class="^Gnome-terminal$"] move scratchpad
 
 bindsym $mod+y exec ~/bin/dmenyt
 exec ~/bin/low_battery.sh
+
+bindsym $mod+n exec firefox https://orf.at
+bindsym $mod+b exec firefox
