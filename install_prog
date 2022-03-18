@@ -27,7 +27,8 @@ sudo apt-get -y install mpv\
   python3-pip\
   light\
   ranger\
-  zathura
+  zathura\
+  inkscape
 
 # i3-swallow
 if [[ ! -d ~/i3-swallow ]]; then
