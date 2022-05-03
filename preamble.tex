@@ -1,45 +1,51 @@
-\documentclass{article}
+\documentclass[a4paper, 12pt]{article}
 
 % Math
-\usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latextut/step3.tex]. 
+\usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latex/latextut/step3.tex]. 
 \usepackage{amsthm} % Enables the \theoremstyle{} command and the proof environment
 % Pictures
-\usepackage{graphicx} % Enables the \includegraphics[]{} option [~/Documents/latextut/step5.tex]
-\usepackage{float} % Enables the strict H option as the float option [~/Documents/latextut/step5.tex]
-\usepackage{subcaption} % Enables subfigures (Pictures next to each other) [~/Documents/latextut/step5.tex]
+\usepackage{graphicx} % Enables the \includegraphics[]{} option [~/Documents/latex/latextut/step5.tex]
+\usepackage{float} % Enables the strict H option as the float option [~/Documents/latex/latextut/step5.tex]
+\usepackage{subcaption} % Enables subfigures (Pictures next to each other) [~/Documents/latex/latextut/step5.tex]
 
-\usepackage{setspace} % Easy way to change spacing of table of content (toc) or spacing in general [~/Documenst/latextut/step6.tex]
+\usepackage{setspace} % Easy way to change spacing of table of content (toc) or spacing in general [~/Documenst/latex/latextut/step6.tex]
 
 % Citations
 \usepackage[backend=bibtex,style=verbose-trad2]{biblatex}
 
 % Tables
-\usepackage{siunitx} % Required for alignment. Formats the units and values. Allows the special S align option [~/Documents/latextut/step9.tex]
-\usepackage{multirow} % Required for multirows [~/Documents/latextut/step9.tex]
-\usepackage{booktabs} % For prettier tables (usage: \toprule, \midrule, \bottomrule instead of \hline [~/Documents/latextut/step9.tex])
-\usepackage{longtable} % To display tables on several pages [~/Documents/latextut/step9.tex]
-\usepackage{rotating} % To display tables in landscape. Very easy to use. Just replace the table environment with the sideways environment (i.e \begin{table}[h!] --> \begin{sideways}[h!]) [~/Documents/latextut/step9.tex]
-\usepackage{pgfplotstable} % Generates table from .csv (comma-seperated value) [~/Documents/latextut/step10.tex]
+\usepackage{siunitx} % Required for alignment. Formats the units and values. Allows the special S align option [~/Documents/latex/latextut/step9.tex]
+\usepackage{multirow} % Required for multirows [~/Documents/latex/latextut/step9.tex]
+\usepackage{booktabs} % For prettier tables (usage: \toprule, \midrule, \bottomrule instead of \hline [~/Documents/latex/latextut/step9.tex])
+\usepackage{longtable} % To display tables on several pages [~/Documents/latex/latextut/step9.tex]
+\usepackage{rotating} % To display tables in landscape. Very easy to use. Just replace the table environment with the sideways environment (i.e \begin{table}[h!] --> \begin{sideways}[h!]) [~/Documents/latex/latextut/step9.tex]
+\usepackage{pgfplotstable} % Generates table from .csv (comma-seperated value) [~/Documents/latex/latextut/step10.tex]
 
 % Diagrams
-\usepackage{tikz} % To generate diagrams within latex [~/Documents/latextut/step12.tex]
+\usepackage{tikz} % To generate diagrams within latex [~/Documents/latex/latextut/step12.tex]
 \usepackage{tkz-euclide} % To be able to draw diagrams like with compass and ruler
 
 % Code. General layout can be accsessd with ,LTS=LisTingS
-\usepackage{listings} [~/Documents/latextut/step13.tex]
-\usepackage{color} [~/Documents/latextut/step13.tex]
+\usepackage{listings} % [~/Documents/latex/latextut/step13.tex]
+\usepackage{color} % [~/Documents/latex/latextut/step13.tex]
 
 % Links
-\usepackage{hyperref} % [~/Documents/latextut/step16.tex]
+\usepackage{hyperref} % [~/Documents/latex/latextut/step16.tex]
 
 % Lists
-\usepackage{enumitem} % To change the symbol of all items of a list [~/Documents/latextut/step17.tex]
+\usepackage{enumitem} % To change the symbol of all items of a list [~/Documents/latex/latextut/step17.tex]
 
 % Setup siunitx:
 \sisetup{
   round-mode        = places, % Rounds numbers
   round-precision   = 2, % to 2 places  
 }
+
+% No indention in newline
+\usepackage{parskip}
+
+% Layout and Padding
+\geometry{a4paper, top=35mm, left=25mm, right=25mm, bottom=30mm}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
@@ -48,13 +54,22 @@
 \newtheorem{corollary}{Corollary}[theorem]
 
 \theoremstyle{plain}
+\newtheorem{Korollar}{Korollar}[theorem]
+
+\theoremstyle{plain}
 \newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{plain}
+\newtheorem{Hilfssatz}[theorem]{Hilfssatz}
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
+
+\theoremstyle{remark}
+\newtheorem*{Anmerkung}{Anmerkung}
 
 \title{<++>}
 \date{<++>}
