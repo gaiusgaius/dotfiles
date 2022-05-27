@@ -1,8 +1,13 @@
 \documentclass[a4paper, 12pt]{article}
 
+% Language
+\usepackage[austrian]{babel}
+
 % Math
 \usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latex/latextut/step3.tex]. 
 \usepackage{amsthm} % Enables the \theoremstyle{} command and the proof environment
+\usepackage{amsfonts} % For the mathbb command
+
 % Pictures
 \usepackage{graphicx} % Enables the \includegraphics[]{} option [~/Documents/latex/latextut/step5.tex]
 \usepackage{float} % Enables the strict H option as the float option [~/Documents/latex/latextut/step5.tex]
@@ -47,33 +52,47 @@
 % Layout and Padding
 \usepackage[a4paper, top=35mm, left=25mm, right=25mm, bottom=30mm]{geometry}
 
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
+% For the header and footer
+\usepackage{fancyhdr} % Package for header and footer style
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{}
+\lhead{\textbf{Julius Stolz}}
+\chead{}
+\rhead{\textbf{\nouppercase{\leftmark}}}
+\lfoot{}
+\cfoot{Seite \thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.0pt}
 
-\theoremstyle{plain}
-\newtheorem{corollary}{Corollary}[theorem]
+% \theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[section]
 
-\theoremstyle{plain}
-\newtheorem{Korollar}{Korollar}[theorem]
+% \theoremstyle{plain}
+% \newtheorem{corollary}{Corollary}[theorem]
 
-\theoremstyle{plain}
-\newtheorem{lemma}[theorem]{Lemma}
+% \theoremstyle{plain}
+% \newtheorem{Korollar}{Korollar}[theorem]
 
-\theoremstyle{plain}
-\newtheorem{Hilfssatz}[theorem]{Hilfssatz}
+% \theoremstyle{plain}
+% \newtheorem{lemma}[theorem]{Lemma}
 
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
+% \theoremstyle{plain}
+% \newtheorem{Hilfssatz}[theorem]{Hilfssatz}
 
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
+% \theoremstyle{definition}
+% \newtheorem{definition}{Definition}[section]
 
-\theoremstyle{remark}
-\newtheorem*{Anmerkung}{Anmerkung}
+% \theoremstyle{remark}
+% \newtheorem*{remark}{Remark}
 
-\title{<++>}
-\date{<++>}
-\author{<++>}
+% \theoremstyle{remark}
+% \newtheorem*{Anmerkung}{Anmerkung}
+
+% \title{<++>}
+% \date{<++>}
+% \author{<++>}
 
 %\begin{document}
 

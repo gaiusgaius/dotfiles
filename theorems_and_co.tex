@@ -10,14 +10,14 @@ fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{theo}
 
 % Corollary
-\newtcbtheorem[number within=theorem]{corollary}{Corollary}%
+\newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
 {colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
 drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
 fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{coro}
 
 % Korollar
-\newtcbtheorem[number within=theorem]{korollar}{Korollar}%
+\newtcbtheorem[use counter from=theorem]{korollar}{Korollar}%
 {colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
 drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
 fonttitle=\upshape\bfseries,fontupper=\upshape,
@@ -38,13 +38,29 @@ fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break, terminator sign none}{def}
 
 % Claim
-\newtcbox{claim}%
-{title=\textbf{\textcolor{green!60!black}{Claim ---}}, coltitle=black,colback=green!60!black,boxrule=0pt,
+\newtcbtheorem{claim}{\textbf{Claim ---}}%
+{coltitle=green!60!black,colback=green!60!black,boxrule=0pt,
 frame hidden, sharp corners, enhanced,
-borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,theorem style=plain}
+borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,
+theorem style=plain,terminator sign none}{cl}
 
 % Behauptung
-\newtcbox{Behauptung}%
-{title=\textbf{\textcolor{green!60!black}{Behauptung ---}}, coltitle=black,colback=green!60!black,boxrule=0pt,
+\newtcbtheorem{behauptung}{\textbf{Behauptung ---}}%
+{coltitle=green!60!black,colback=green!60!black,boxrule=0pt,
 frame hidden, sharp corners, enhanced,
-borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,theorem style=plain}
+borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,
+theorem style=plain,terminator sign none}{Be}
+
+% Remark
+\newtcbtheorem{remark}{\textbf{Remark ---}}%
+{coltitle=black,colback=white!60!black,boxrule=0pt,
+frame hidden,sharp corners, enhanced,
+borderline west={3pt}{0pt}{black},
+opacityback=0.1,
+theorem style=plain,terminator sign none}{Re}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
