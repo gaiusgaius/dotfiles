@@ -1,0 +1,50 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{theorems}
+
+% Theorem
+\newtcbtheorem[number within=section]{theorem}{Theorem}%  
+{colframe=blue!50!black,colback=yellow!15!white,coltitle=red!50!black,
+drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{theo}
+
+% Corollary
+\newtcbtheorem[number within=theorem]{corollary}{Corollary}%
+{colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
+drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{coro}
+
+% Korollar
+\newtcbtheorem[number within=theorem]{korollar}{Korollar}%
+{colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
+drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{koro}
+
+% Lemma
+\newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
+{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!60!black,
+boxrule=0.4pt,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{lem}
+
+% Definition
+\newtcbtheorem[number within=section]{definition}{Definition}%
+{colframe=blue!50!black,colback=cyan!10!white,coltitle=blue!50!black,
+boxrule=0.4pt,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break, terminator sign none}{def}
+
+% Claim
+\newtcbox{claim}%
+{title=\textbf{\textcolor{green!60!black}{Claim ---}}, coltitle=black,colback=green!60!black,boxrule=0pt,
+frame hidden, sharp corners, enhanced,
+borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,theorem style=plain}
+
+% Behauptung
+\newtcbox{Behauptung}%
+{title=\textbf{\textcolor{green!60!black}{Behauptung ---}}, coltitle=black,colback=green!60!black,boxrule=0pt,
+frame hidden, sharp corners, enhanced,
+borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,theorem style=plain}
