@@ -4,28 +4,35 @@
 
 % Theorem
 \newtcbtheorem[number within=section]{theorem}{Theorem}%  
-{colframe=blue!50!black,colback=yellow!15!white,coltitle=red!50!black,
+{colframe=blue!50!black,colback=yellow!15!white!95!brown,coltitle=red!50!black,
 drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
 fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{theo}
 
-% Corollary
-\newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
+% Proposition
+\newtcbtheorem[use counter from=theorem]{proposition}{Proposition}%
 {colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
 drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{pro}
+
+% Corollary
+\newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
+{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!60!black,
+boxrule=0.4pt,
 fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{coro}
 
 % Korollar
 \newtcbtheorem[use counter from=theorem]{korollar}{Korollar}%
-{colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
-drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
+{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!50!black,
+boxrule=0.4pt,
 fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{koro}
 
 % Lemma
 \newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
-{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!60!black,
+{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!50!black,
 boxrule=0.4pt,
 fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{lem}
@@ -39,14 +46,14 @@ theorem style=break, terminator sign none}{def}
 
 % Claim
 \newtcbtheorem{claim}{\textbf{Claim ---}}%
-{coltitle=green!60!black,colback=green!60!black,boxrule=0pt,
+{coltitle=green!50!black,colback=green!60!black,boxrule=0pt,
 frame hidden, sharp corners, enhanced,
 borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,
 theorem style=plain,terminator sign none}{cl}
 
 % Behauptung
 \newtcbtheorem{behauptung}{\textbf{Behauptung ---}}%
-{coltitle=green!60!black,colback=green!60!black,boxrule=0pt,
+{coltitle=green!50!black,colback=green!60!black,boxrule=0pt,
 frame hidden, sharp corners, enhanced,
 borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,
 theorem style=plain,terminator sign none}{Be}
@@ -58,6 +65,22 @@ frame hidden,sharp corners, enhanced,
 borderline west={3pt}{0pt}{black},
 opacityback=0.1,
 theorem style=plain,terminator sign none}{Re}
+
+% Example
+\newtcbtheorem[number within=section]{example}{Example}%
+{colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
+enhanced, sharp corners,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{ex}
+
+% Beispiel
+\newtcbtheorem[number within=section]{beispiel}{Beispiel}%
+{colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
+enhanced, sharp corners,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
+theorem style=break,terminator sign none}{bei}
+
+
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
