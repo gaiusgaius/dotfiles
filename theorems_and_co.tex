@@ -6,42 +6,42 @@
 \newtcbtheorem[number within=section]{theorem}{Theorem}%  
 {colframe=blue!50!black,colback=yellow!15!white!95!brown,coltitle=red!50!black,
 drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{theo}
 
 % Proposition
 \newtcbtheorem[use counter from=theorem]{proposition}{Proposition}%
-{colframe=blue!50!black,colback=yellow!20!white,coltitle=red!50!black,
+{colframe=blue!50!black,colback=yellow!15!white!95!brown,coltitle=red!50!black,
 drop fuzzy shadow=blue!50!black!50!white,boxrule=0.4pt,enhanced,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{pro}
 
 % Corollary
 \newtcbtheorem[use counter from=theorem]{corollary}{Corollary}%
 {colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!60!black,
 boxrule=0.4pt,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{coro}
 
 % Korollar
 \newtcbtheorem[use counter from=theorem]{korollar}{Korollar}%
-{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!50!black,
+{colframe=green!50!black,colback=green!60!black!10!white,coltitle=green!50!black,
 boxrule=0.4pt,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{koro}
 
 % Lemma
 \newtcbtheorem[use counter from=theorem]{lemma}{Lemma}%
-{colframe=green!60!black,colback=green!60!black!10!white,coltitle=green!50!black,
+{colframe=green!50!black,colback=green!60!black!10!white,coltitle=green!50!black,
 boxrule=0.4pt,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{lem}
 
 % Definition
-\newtcbtheorem[number within=section]{definition}{Definition}%
+\newtcbtheorem[use counter from=theorem]{definition}{Definition}%
 {colframe=blue!50!black,colback=cyan!10!white,coltitle=blue!50!black,
 boxrule=0.4pt,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break, terminator sign none}{def}
 
 % Claim
@@ -59,31 +59,92 @@ borderline west={3pt}{0pt}{green!60!black},opacityback=0.1,
 theorem style=plain,terminator sign none}{Be}
 
 % Remark
-\newtcbtheorem{remark}{\textbf{Remark ---}}%
+\newtcbtheorem[use counter from=theorem]{remark}{\textbf{Remark}}%
 {coltitle=black,colback=white!60!black,boxrule=0pt,
 frame hidden,sharp corners, enhanced,
 borderline west={3pt}{0pt}{black},
 opacityback=0.1,
-theorem style=plain,terminator sign none}{Re}
+theorem style=plain,terminator sign dash}{Re}
+
+% Anmerkung
+\newtcbtheorem[use counter from=theorem]{anmerkung}{\textbf{Anmerkung}}%
+{coltitle=black,colback=white!60!black,boxrule=0pt,
+frame hidden,sharp corners, enhanced,
+borderline west={3pt}{0pt}{black},
+opacityback=0.1,
+theorem style=plain,terminator sign dash}{Re}
 
 % Example
-\newtcbtheorem[number within=section]{example}{Example}%
+\newtcbtheorem[use counter from=theorem]{example}{Example}%
 {colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
 enhanced, sharp corners,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{ex}
 
 % Beispiel
-\newtcbtheorem[number within=section]{beispiel}{Beispiel}%
+\newtcbtheorem[use counter from=theorem]{beispiel}{Beispiel}%
 {colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
 enhanced, sharp corners,
-fonttitle=\upshape\bfseries,fontupper=\upshape,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
 theorem style=break,terminator sign none}{bei}
 
+% Exercise
+\newtcbtheorem[use counter from=theorem]{exercise}{Exercise}%
+{colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
+enhanced, sharp corners,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
+theorem style=break,terminator sign none}{exe}
 
+% Aufgabe
+\newtcbtheorem[use counter from=theorem]{aufgabe}{Aufgabe}%
+{colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
+enhanced, sharp corners,
+fonttitle=\upshape\bfseries,fontupper=\itshape,
+theorem style=break,terminator sign none}{au}
 
+% Question
+\newtcbtheorem[use counter from=theorem]{question}{\textbf{Question}}%
+{coltitle=black,colback=white!60!black,boxrule=0pt,
+frame hidden,sharp corners, enhanced,
+borderline west={3pt}{0pt}{black},
+opacityback=0.1,
+theorem style=plain,terminator sign dash}{qu}
+
+% Answer
+\newtcbtheorem[use counter from=theorem]{answer}{\textbf{Answer}}%
+{coltitle=black,colback=white!60!black,boxrule=0pt,
+frame hidden,sharp corners, enhanced,
+borderline west={3pt}{0pt}{black},
+opacityback=0.1,
+theorem style=plain,terminator sign dash}{qu}
+
+% Frage
+\newtcbtheorem[use counter from=theorem]{frage}{\textbf{Frage}}%
+{coltitle=black,colback=white!60!black,boxrule=0pt,
+frame hidden,sharp corners, enhanced,
+borderline west={3pt}{0pt}{black},
+opacityback=0.1,
+theorem style=plain,terminator sign dash}{fr}
+
+% Frage
+\newtcbtheorem[use counter from=theorem]{antwort}{\textbf{Antwort}}%
+{coltitle=black,colback=white!60!black,boxrule=0pt,
+frame hidden,sharp corners, enhanced,
+borderline west={3pt}{0pt}{black},
+opacityback=0.1,
+theorem style=plain,terminator sign dash}{fr}
+
+% Mengen
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+
+% Geometry
+\newcommand{\mangle}[1]{\measuredangle #1}
+\newcommand{\sangle}[1]{\sphericalangle #1}
+
+% Logic
+\renewcommand{\and}{\; \wedge \;}
+\renewcommand{\or}{\; \vee \;}

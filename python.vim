@@ -18,4 +18,3 @@ let g:lightline = {
       \ }
 
 nnoremap <F2> :w<Return>:!clear; python3 %<Return>
-

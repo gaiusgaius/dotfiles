@@ -11,6 +11,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'farmergreg/vim-lastplace'
+
 " Latex
 Plugin 'vim-latex/vim-latex'
 Plugin 'lervag/vimtex'
@@ -39,6 +41,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'honza/vim-snippets'
 Plugin 'habamax/vim-gruvbit'
 Plugin 'trapd00r/neverland-vim-theme'
+Plugin 'sainnhe/gruvbox-material'
 
 call vundle#end()
 
@@ -71,7 +74,7 @@ if has('mouse')
   set mouse=a
 endif
 " Display a status bar at the bottom
-set laststatus=2
+"set laststatus=2
 " Show the line number of the cursor in the status bar
 set ruler
 
@@ -107,3 +110,6 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 let g:livepreview_previewer = 'zathura'
+
+" Transparent background
+hi Normal guibg=NONE ctermbg=NONE

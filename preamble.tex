@@ -1,7 +1,8 @@
 \documentclass[a4paper, 12pt]{article}
 
 % Language
-\usepackage[austrian]{babel}
+\usepackage[english]{babel}
+%\usepackage[austrian]{babel}
 
 % Math
 \usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latex/latextut/step3.tex]. 
@@ -61,10 +62,19 @@
 \chead{}
 \rhead{\textbf{\nouppercase{\leftmark}}}
 \lfoot{}
-\cfoot{Seite \thepage}
+\cfoot{Page \thepage}
 \rfoot{}
 \renewcommand{\headrulewidth}{0.6pt}
 \renewcommand{\footrulewidth}{0.0pt}
+
+% Induction Environment
+\newcommand{\induction}[2]
+{
+  \begin{description}[itemindent=-2em,leftmargin=2em]
+    \item[\textbf{Base Case:}] #1
+    \item[\textbf{Induction step:}] #2 \hfill\qedsymbol
+  \end{description}
+}
 
 % \theoremstyle{plain}
 % \newtheorem{theorem}{Theorem}[section]
