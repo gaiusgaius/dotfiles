@@ -78,7 +78,7 @@ theorem style=plain,terminator sign dash}{Re}
 \newtcbtheorem[use counter from=theorem]{example}{Example}%
 {colframe=red!50!white,colback=red!5!white,coltitle=red!50!black,boxrule=0.4pt,
 enhanced, sharp corners,
-fonttitle=\upshape\bfseries,fontupper=\itshape,
+fonttitle=\upshape\bfseries,fontupper=\upshape,
 theorem style=break,terminator sign none}{ex}
 
 % Beispiel
@@ -146,5 +146,3 @@ theorem style=plain,terminator sign dash}{fr}
 \newcommand{\sangle}[1]{\sphericalangle #1}
 
 % Logic
-\renewcommand{\and}{\; \wedge \;}
-\renewcommand{\or}{\; \vee \;}

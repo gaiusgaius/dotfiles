@@ -1,4 +1,5 @@
-setlocal number
+" setlocal number
+setlocal relativenumber
 " colorscheme default
 syntax on
 setlocal tabstop=2

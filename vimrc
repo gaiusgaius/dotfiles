@@ -42,6 +42,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'habamax/vim-gruvbit'
 Plugin 'trapd00r/neverland-vim-theme'
 Plugin 'sainnhe/gruvbox-material'
+Plugin 'bluz71/vim-moonfly-colors'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 

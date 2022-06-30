@@ -8,6 +8,7 @@
 \usepackage{amsmath} % Enables the align enviroment, as well as the equation* and align* enviroments [~/Documents/latex/latextut/step3.tex]. 
 \usepackage{amsthm} % Enables the \theoremstyle{} command and the proof environment
 \usepackage{amsfonts} % For the mathbb command
+\usepackage{amssymb} % For the not divieds \nmid command
 
 % Pictures
 \usepackage{graphicx} % Enables the \includegraphics[]{} option [~/Documents/latex/latextut/step5.tex]
@@ -46,8 +47,6 @@
   round-mode        = places, % Rounds numbers
   round-precision   = 2, % to 2 places  
 }
-
-% No indention in newline
 %\usepackage{parskip}
 
 % Layout and Padding
@@ -75,6 +74,13 @@
     \item[\textbf{Induction step:}] #2 \hfill\qedsymbol
   \end{description}
 }
+
+\renewcommand{\!}[1]{\stackrel{!}{#1}}
+\newcommand{\?}[1]{\stackrel{?}{#1}}
+\newcommand{\set}[1]{\{#1\}}
+
+\newcommand{\divides}{\mid}
+\newcommand{\notdivides}{\nmid}
 
 % \theoremstyle{plain}
 % \newtheorem{theorem}{Theorem}[section]
